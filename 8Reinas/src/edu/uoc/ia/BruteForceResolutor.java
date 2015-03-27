@@ -10,7 +10,7 @@ public class BruteForceResolutor {
 	 * Cada posición de la lista representa una fila del tablero
 	 * Cada valor de la lista, representa una columna
 	 */
-	private static List<Integer> generator = Arrays.asList(0,1,2,3,4,5,6,7);
+	private static List<Integer> generator = Arrays.asList(4,3,7,6,5,2,1,0);
 	private static int numTestedCombinations = 0;
 	private static long elapsedMiliseconds = 0;
 	
@@ -21,7 +21,7 @@ public class BruteForceResolutor {
 			for(int j=i-1; j>=0; j--){
 				
 				if(positions.get(i)-positions.get(j) == i-j ||
-				   positions.get(j)-positions.get(i) == j-i){
+				   positions.get(j)-positions.get(i) == i-j){
 					
 					return false;
 				}
